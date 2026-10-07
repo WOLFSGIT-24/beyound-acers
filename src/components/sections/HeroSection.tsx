@@ -72,29 +72,28 @@ export default function HeroSection({ onOpenPopup }: HeroSectionProps) {
             </h2>
           </Reveal>
 
-          {/* Sold Badge Pill */}
+          {/* Sold Badge Pill - Golden Background & Black Text */}
           <Reveal delay={200}>
             <div style={{ 
               display: 'inline-flex', 
               alignItems: 'center', 
               gap: 'clamp(12px, 2vw, 24px)', 
-              background: 'linear-gradient(135deg, rgba(234, 242, 255, 0.95) 0%, rgba(215, 230, 255, 0.9) 100%)', 
-              backdropFilter: 'blur(16px)', 
+              background: '#C9A84C', 
               borderRadius: 14, 
               padding: 'clamp(12px, 1.8vh, 18px) clamp(20px, 3vw, 32px)', 
-              boxShadow: '0 12px 40px rgba(0, 0, 0, 0.35)', 
+              boxShadow: '0 12px 35px rgba(201, 168, 76, 0.35)', 
               marginBottom: 'clamp(28px, 4vh, 44px)',
-              border: '1px solid rgba(255, 255, 255, 0.6)'
+              border: '1px solid rgba(255, 255, 255, 0.4)'
             }}>
-              <span style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 800, fontSize: 'clamp(2rem, 4.2vw, 3.6rem)', color: '#0F3875', lineHeight: 1, letterSpacing: '-0.02em' }}>
+              <span style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 800, fontSize: 'clamp(2rem, 4.2vw, 3.6rem)', color: '#0A162C', lineHeight: 1, letterSpacing: '-0.02em' }}>
                 180+
               </span>
-              <div style={{ width: 2, height: 'clamp(28px, 4vw, 42px)', background: '#0F3875', opacity: 0.25 }} />
+              <div style={{ width: 2, height: 'clamp(28px, 4vw, 42px)', background: '#0A162C', opacity: 0.3 }} />
               <div style={{ display: 'flex', flexDirection: 'column' }}>
-                <span style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 800, fontSize: 'clamp(11px, 1.2vw, 15px)', color: '#0F3875', letterSpacing: '0.15em', textTransform: 'uppercase', lineHeight: 1.2 }}>
+                <span style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 800, fontSize: 'clamp(11px, 1.2vw, 15px)', color: '#0A162C', letterSpacing: '0.15em', textTransform: 'uppercase', lineHeight: 1.2 }}>
                   PLOTS SOLD
                 </span>
-                <span style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 500, fontSize: 'clamp(10px, 1vw, 13px)', color: '#1E40AF', letterSpacing: '0.12em', textTransform: 'uppercase', marginTop: 3, opacity: 0.9 }}>
+                <span style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600, fontSize: 'clamp(10px, 1vw, 13px)', color: '#0A162C', letterSpacing: '0.12em', textTransform: 'uppercase', marginTop: 3, opacity: 0.9 }}>
                   IN PRE-LAUNCH PHASE
                 </span>
               </div>
@@ -199,25 +198,25 @@ export default function HeroSection({ onOpenPopup }: HeroSectionProps) {
             </div>
           </Reveal>
 
-          {/* Action Buttons + Grand Launch Box */}
+          {/* Action Buttons + Larger Grand Launch Box */}
           <Reveal delay={280}>
-            <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap', alignItems: 'center' }}>
+            <div style={{ display: 'flex', gap: 20, flexWrap: 'wrap', alignItems: 'center' }}>
               <button 
                 onClick={onOpenPopup}
                 style={{ 
                   display: 'inline-flex', 
                   alignItems: 'center', 
                   gap: 10, 
-                  padding: '16px 32px', 
+                  padding: '18px 36px', 
                   background: '#C9A84C', 
                   color: '#0A162C', 
                   fontFamily: 'Roboto, sans-serif', 
                   fontWeight: 700, 
-                  fontSize: '11px', 
+                  fontSize: '12px', 
                   letterSpacing: '0.16em', 
                   textTransform: 'uppercase', 
                   border: 'none', 
-                  borderRadius: 6,
+                  borderRadius: 8,
                   cursor: 'pointer', 
                   boxShadow: '0 6px 24px rgba(201, 168, 76, 0.35)',
                   transition: 'transform 0.2s ease, background 0.2s ease'
@@ -231,9 +230,9 @@ export default function HeroSection({ onOpenPopup }: HeroSectionProps) {
                   e.currentTarget.style.transform = 'translateY(0)';
                 }}
               >
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
                 Book a Site Visit
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
               </button>
 
               <button 
@@ -242,17 +241,17 @@ export default function HeroSection({ onOpenPopup }: HeroSectionProps) {
                   display: 'inline-flex', 
                   alignItems: 'center', 
                   gap: 8, 
-                  padding: '16px 28px', 
+                  padding: '18px 32px', 
                   background: 'rgba(255, 255, 255, 0.1)', 
                   backdropFilter: 'blur(12px)',
                   color: '#FFFFFF', 
                   fontFamily: 'Roboto, sans-serif', 
                   fontWeight: 600, 
-                  fontSize: '11px', 
+                  fontSize: '12px', 
                   letterSpacing: '0.16em', 
                   textTransform: 'uppercase', 
-                  border: '1px solid rgba(255, 255, 255, 0.25)', 
-                  borderRadius: 6,
+                  border: '1.5px solid rgba(255, 255, 255, 0.3)', 
+                  borderRadius: 8,
                   cursor: 'pointer',
                   transition: 'background 0.2s ease'
                 }}
@@ -262,35 +261,35 @@ export default function HeroSection({ onOpenPopup }: HeroSectionProps) {
                 Enquire Now
               </button>
 
-              {/* Grand Launch Box placed after Enquiry button */}
+              {/* Increased Size Grand Launch Box */}
               <div style={{
                 display: 'inline-flex',
                 alignItems: 'center',
-                gap: 16,
-                padding: '12px 20px',
-                background: 'rgba(10, 22, 44, 0.75)',
-                backdropFilter: 'blur(16px)',
-                WebkitBackdropFilter: 'blur(16px)',
-                border: '1px solid rgba(201, 168, 76, 0.45)',
-                borderRadius: 8,
-                boxShadow: '0 8px 30px rgba(0, 0, 0, 0.35)',
+                gap: 20,
+                padding: '16px 28px',
+                background: 'rgba(10, 22, 44, 0.85)',
+                backdropFilter: 'blur(20px)',
+                WebkitBackdropFilter: 'blur(20px)',
+                border: '1.5px solid rgba(201, 168, 76, 0.55)',
+                borderRadius: 10,
+                boxShadow: '0 10px 36px rgba(0, 0, 0, 0.45)',
               }}>
                 <div style={{ display: 'flex', flexDirection: 'column' }}>
-                  <span style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 800, fontSize: '11px', letterSpacing: '0.18em', color: '#C9A84C', textTransform: 'uppercase' }}>
+                  <span style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 800, fontSize: '13px', letterSpacing: '0.22em', color: '#C9A84C', textTransform: 'uppercase' }}>
                     Grand Launch
                   </span>
-                  <span style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: '15px', color: '#FFFFFF', marginTop: 2, lineHeight: 1.1 }}>
+                  <span style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: '20px', color: '#FFFFFF', marginTop: 3, lineHeight: 1.1 }}>
                     This Dussehra
                   </span>
                 </div>
-                <div style={{ width: 1, height: 28, background: 'rgba(201, 168, 76, 0.35)' }} />
+                <div style={{ width: 1.5, height: 38, background: 'rgba(201, 168, 76, 0.45)' }} />
                 <div style={{
-                  padding: '4px 12px',
-                  background: 'rgba(201, 168, 76, 0.15)',
-                  border: '1px solid rgba(201, 168, 76, 0.4)',
-                  borderRadius: 14,
+                  padding: '8px 18px',
+                  background: 'rgba(201, 168, 76, 0.18)',
+                  border: '1px solid rgba(201, 168, 76, 0.5)',
+                  borderRadius: 20,
                 }}>
-                  <span style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600, fontSize: '10px', letterSpacing: '0.16em', textTransform: 'uppercase', color: '#EAF2FF' }}>
+                  <span style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 700, fontSize: '12px', letterSpacing: '0.18em', textTransform: 'uppercase', color: '#EAF2FF' }}>
                     Coming Soon
                   </span>
                 </div>
