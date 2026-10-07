@@ -5,6 +5,8 @@ import { Image } from '@/components/ui/image';
 import { buildTrackingPayload } from '@/lib/utm-tracker';
 import { fireLeadConversions } from '@/lib/gtag';
 
+import { sendLeadToWebhook } from '@/lib/webhook';
+
 interface EnquiryPopupProps {
   isOpen: boolean;
   onClose: () => void;
@@ -44,9 +46,12 @@ export default function EnquiryPopup({ isOpen, onClose }: EnquiryPopupProps) {
         phoneNumber: form.phoneNumber,
         emailAddress: form.emailAddress,
         message: 'Popup enquiry',
-        dateSubmitted: new Date(),
+        dateSubmitted: new Date().toISOString(),
         ...tracking,
       };
+
+      // Send lead payload to Make.com webhook
+      await sendLeadToWebhook(payload);
 
       await BaseCrudService.create('inquiries', payload);
       setSubmitted(true);

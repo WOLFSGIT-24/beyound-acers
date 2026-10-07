@@ -20,11 +20,14 @@ import ConfigurationSection from '@/components/sections/ConfigurationSection';
 import GallerySection from '@/components/sections/GallerySection';
 import BookCallSection from '@/components/sections/BookCallSection';
 import FAQSection from '@/components/sections/FAQSection';
+import ContactSection from '@/components/sections/ContactSection';
 import SeoKeywordsSection from '@/components/sections/SeoKeywordsSection';
 import { BaseCrudService } from '@/integrations';
 import { initializeUTMTracking } from '@/lib/utm-tracker';
 import { buildTrackingPayload } from '@/lib/utm-tracker';
 import { initializeAllTrackers } from '@/lib/tracker-init';
+
+import { sendLeadToWebhook } from '@/lib/webhook';
 
 export default function HomePage() {
   // --- STATE ---
@@ -63,9 +66,12 @@ export default function HomePage() {
         emailAddress: formData.emailAddress,
         phoneNumber: formData.phoneNumber,
         message: formData.message,
-        dateSubmitted: new Date(),
+        dateSubmitted: new Date().toISOString(),
         ...tracking,
       };
+
+      // Send lead payload to Make.com webhook
+      await sendLeadToWebhook(payload);
 
       await BaseCrudService.create('inquiries', payload);
 
@@ -122,6 +128,12 @@ export default function HomePage() {
       <BookCallSection onOpenPopup={() => setPopupOpen(true)} />
 
       <FAQSection />
+
+      <ContactSection 
+        onFormSubmit={handleFormSubmit}
+        isSubmitting={isSubmitting}
+        submitMessage={submitMessage}
+      />
 
       <SeoKeywordsSection />
 
