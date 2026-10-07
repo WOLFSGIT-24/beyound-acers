@@ -2,20 +2,24 @@ export const MAKE_WEBHOOK_URL = 'https://hook.us1.make.com/tj4twkidsre5c17695lf2
 
 /**
  * Formats the lead into the flat set of fields mapped in the Make.com scenario.
- * Timestamp is Indian Standard Time, e.g. "07/10/2026, 08:56:29 pm".
+ * Timestamp is Indian Standard Time, e.g. "07 Oct 2026, 08:56:29 pm IST".
+ * The "IST" suffix keeps Google Sheets from converting it into a date serial number.
  */
 export function formatWebhookPayload(data: Record<string, any>): Record<string, string> {
   const submitted = data.dateSubmitted ? new Date(data.dateSubmitted) : new Date();
-  const timestampIST = submitted.toLocaleString('en-IN', {
-    timeZone: 'Asia/Kolkata',
-    day: '2-digit',
-    month: '2-digit',
-    year: 'numeric',
-    hour: '2-digit',
-    minute: '2-digit',
-    second: '2-digit',
-    hour12: true,
-  });
+  const parts = Object.fromEntries(
+    new Intl.DateTimeFormat('en-IN', {
+      timeZone: 'Asia/Kolkata',
+      day: '2-digit',
+      month: 'short',
+      year: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+      hour12: true,
+    }).formatToParts(submitted).map((p) => [p.type, p.value])
+  );
+  const timestampIST = `${parts.day} ${parts.month} ${parts.year}, ${parts.hour}:${parts.minute}:${parts.second} ${parts.dayPeriod.toLowerCase()} IST`;
 
   return {
     'Full Name': String(data.fullName || '').trim(),
