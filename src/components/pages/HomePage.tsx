@@ -20,7 +20,7 @@ import ConfigurationSection from '@/components/sections/ConfigurationSection';
 import GallerySection from '@/components/sections/GallerySection';
 import BookCallSection from '@/components/sections/BookCallSection';
 import FAQSection from '@/components/sections/FAQSection';
-import ContactSection from '@/components/sections/ContactSection';
+// import ContactSection from '@/components/sections/ContactSection';
 import SeoKeywordsSection from '@/components/sections/SeoKeywordsSection';
 import { BaseCrudService } from '@/integrations';
 import { initializeUTMTracking } from '@/lib/utm-tracker';
@@ -129,11 +129,11 @@ export default function HomePage() {
 
       <FAQSection />
 
-      <ContactSection 
+      {/* <ContactSection
         onFormSubmit={handleFormSubmit}
         isSubmitting={isSubmitting}
         submitMessage={submitMessage}
-      />
+      /> */}
 
       <SeoKeywordsSection />
 

@@ -1,102 +1,30 @@
 export const MAKE_WEBHOOK_URL = 'https://hook.us1.make.com/tj4twkidsre5c17695lf2d8bn1j1afds';
 
 /**
- * Formats lead payload to include all common field key variations
- * (camelCase, snake_case, Pascal Case with spaces) so that Make.com / Google Sheets
- * scenarios receive the correct mapping regardless of key configuration.
+ * Formats the lead into the flat set of fields mapped in the Make.com scenario.
+ * Timestamp is Indian Standard Time, e.g. "07/10/2026, 08:56:29 pm".
  */
-export function formatWebhookPayload(data: Record<string, any>): Record<string, any> {
-  const now = data.dateSubmitted ? new Date(data.dateSubmitted).toISOString() : new Date().toISOString();
-  const dateFormatted = new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' });
-
-  const name = String(data.fullName || data.name || data.full_name || '').trim();
-  const email = String(data.emailAddress || data.email || data.email_address || '').trim();
-  const phone = String(data.phoneNumber || data.phone || data.phone_number || data.mobile || '').trim();
-  const msg = String(data.message || data.comments || data.notes || '').trim();
-
-  const utmSource = String(data.utmSource || data.utm_source || '').trim();
-  const utmMedium = String(data.utmMedium || data.utm_medium || '').trim();
-  const utmCampaign = String(data.utmCampaign || data.utm_campaign || '').trim();
-  const utmTerm = String(data.utmTerm || data.utm_term || '').trim();
-  const utmContent = String(data.utmContent || data.utm_content || '').trim();
-  const gclid = String(data.gclid || '').trim();
-  const trackCode = String(data.trackCode || data.track_code || '').trim();
-  const campaignLabel = String(data.campaignLabel || data.campaign_label || '').trim();
+export function formatWebhookPayload(data: Record<string, any>): Record<string, string> {
+  const submitted = data.dateSubmitted ? new Date(data.dateSubmitted) : new Date();
+  const timestampIST = submitted.toLocaleString('en-IN', {
+    timeZone: 'Asia/Kolkata',
+    day: '2-digit',
+    month: '2-digit',
+    year: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+    hour12: true,
+  });
 
   return {
-    // Standard ID & Dates
-    _id: data._id || crypto.randomUUID(),
-    id: data._id || crypto.randomUUID(),
-    dateSubmitted: now,
-    date_submitted: now,
-    date: dateFormatted,
-    timestamp: now,
-    submittedAt: now,
-    "Date Submitted": dateFormatted,
-
-    // Name variations
-    fullName: name,
-    full_name: name,
-    name: name,
-    "Full Name": name,
-    "Name": name,
-
-    // Email variations
-    emailAddress: email,
-    email_address: email,
-    email: email,
-    "Email Address": email,
-    "Email": email,
-
-    // Phone variations
-    phoneNumber: phone,
-    phone_number: phone,
-    phone: phone,
-    mobile: phone,
-    mobile_number: phone,
-    "Phone Number": phone,
-    "Phone": phone,
-    "Mobile": phone,
-
-    // Message variations
-    message: msg,
-    notes: msg,
-    comments: msg,
-    "Message": msg,
-
-    // Page metadata
-    source: 'Website Form',
-    pageUrl: typeof window !== 'undefined' ? window.location.href : '',
-    page_url: typeof window !== 'undefined' ? window.location.href : '',
-    "Page URL": typeof window !== 'undefined' ? window.location.href : '',
-
-    // UTM & Tracking variations
-    utmSource,
-    utm_source: utmSource,
-    "UTM Source": utmSource,
-
-    utmMedium,
-    utm_medium: utmMedium,
-    "UTM Medium": utmMedium,
-
-    utmCampaign,
-    utm_campaign: utmCampaign,
-    "UTM Campaign": utmCampaign,
-
-    utmTerm,
-    utm_term: utmTerm,
-    "UTM Term": utmTerm,
-
-    utmContent,
-    utm_content: utmContent,
-    "UTM Content": utmContent,
-
-    gclid,
-    GCLID: gclid,
-    trackCode,
-    track_code: trackCode,
-    campaignLabel,
-    campaign_label: campaignLabel,
+    'Full Name': String(data.fullName || '').trim(),
+    'Phone Number': String(data.phoneNumber || '').trim(),
+    'Email': String(data.emailAddress || '').trim(),
+    'Source': 'Website Form',
+    'Timestamp': timestampIST,
+    'Track Code': String(data.trackCode || '').trim(),
+    'Campaign Label': String(data.campaignLabel || '').trim(),
   };
 }
 
