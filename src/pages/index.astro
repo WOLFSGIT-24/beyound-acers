@@ -1,0 +1,27 @@
+---
+import { Head } from "@/components/Head";
+import AppRouter from "@/components/Router";
+import "@/styles/global.css";
+---
+
+<html lang="en" class="w-full min-h-full">
+  <head>
+    <Head />
+    <title>Beyond Acres</title>
+    <meta name="description" content="Beyond Acres - Premium Plotted Development" />
+
+    <!-- Google tag (gtag.js) -->
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=AW-18105572030"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-18105572030');
+    </script>
+  </head>
+  <body class="w-full min-h-full">
+    <div id="root" class="w-full min-h-full">
+      <AppRouter client:only="react" />
+    </div>
+  </body>
+</html>

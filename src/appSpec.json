@@ -1,0 +1,226 @@
+{
+  "id": "ed705437-9e05-4d7c-a14d-2c48f4f3a752",
+  "initialPrompt": "Create a website inspired by https://theivycountyplots.com/?utm_source=GSNBrand&utm_sub_source=Digital&utm_medium=cpc&utm_campaign=IvyCountyGSNBrand&utm_term=icon%20homz%20ivy%20county&utm_content=193126859496&utm_agencypartner=Propstory&gad_source=1&gad_campaignid=23521205724&gbraid=0AAAAA94AjD0uj1S_ztdqubSLsafsWuRQx&gclid=Cj0KCQjw_IXQBhCkARIsADqELbJENX4NfhGczIGsUIlaYphCMIHovBr72-jRpxDOCopYJySEd_b3FI0aAv_1EALw_wcB",
+  "siteName": "theivycountyplots.com",
+  "brandBook": {
+    "tones": [
+      "professional",
+      "calm",
+      "luxurious",
+      "informative",
+      "aspirational"
+    ],
+    "designStyle": {
+      "primaryStyle": [
+        "Elegant"
+      ],
+      "supportingStyles": [
+        "Minimalist",
+        "Sophisticated"
+      ]
+    },
+    "toneOfVoice": "Professional, sophisticated, trustworthy, serene, aspirational.",
+    "graphicElements": {
+      "icons": "Clean, line-based icons that match the premium aesthetic. Primarily in dark grey or primary color.",
+      "stickers": "",
+      "illustrations": "Subtle, sophisticated illustrations that complement the theme of nature, community, and modern living. Avoid overly complex or cartoonish styles."
+    },
+    "designSummary": "**The Serene Township: A Fusion of Elegance and Nature**\n\nThe Vision: To translate the premium, sustainable, and community-focused essence of Ivy County into a digital experience that exudes calm, trust, and sophisticated luxury. The design will mirror the tranquility of a well-planned township, emphasizing spaciousness, clarity, and a connection to nature, while upholding a premium feel.\n\n**Execution Blueprint:**\n1. Generous Whitespace: Employ ample negative space to create an airy, uncluttered feel, allowing each element to breathe and convey a sense of premium quality.\n2. Balanced Layouts: Utilize symmetrical and balanced compositions, drawing inspiration from classical architecture and the structured elegance of the 'Elegant' style. This ensures a sense of order and stability.\n3. Typographic Harmony: Combine a classic, high-contrast serif for headlines with a clean, readable sans-serif for body text, creating a sophisticated and accessible hierarchy.\n4. Muted, Earthy Palette: Leverage the extracted color palette, focusing on deep greens, off-whites, and subtle earthy tones to evoke nature and tranquility. Accents will be used sparingly to highlight key information and CTAs.\n5. Subtle Interactions: Implement gentle animations and transitions that enhance the user experience without being distracting, reinforcing the brand's sophisticated and calm demeanor.",
+    "layout": {
+      "grid": {
+        "margins": "Generous margins around sections and content blocks.",
+        "padding": "Consistent padding within containers, typically 24px or 32px.",
+        "compositionApproach": "Symmetrical 12-column grid with balanced sections.",
+        "spacing": {
+          "gaps": "8px base unit. Standard gaps are 24px (3x base unit) for sections and 16px (2x base unit) for internal elements.",
+          "rows": "Multiples of 8px for vertical rhythm.",
+          "columns": "8px base unit, with standard column widths and gutters.",
+          "compositionApproach": "Not specified"
+        }
+      },
+      "layoutDna": {
+        "contrastSpectrum": "Moderate to high, with clear distinction between text and background, and subtle contrast for interactive elements.",
+        "densitySpectrum": "Spacious, with generous use of negative space.",
+        "textVsImageEmphasis": "Balanced, with high-quality imagery supporting and complementing the text.",
+        "complexitySpectrum": "Low to moderate, focusing on clarity and ease of navigation.",
+        "gridAlignmentSpectrum": "Symmetrical and balanced, with a strong underlying grid structure.",
+        "negativeSpaceUsage": "Extensive, to convey premium quality and tranquility."
+      },
+      "heroSectionLayout": "**The Grand Entrance: Elevated Welcome**\nComposition (Tailwind Spec): Container `h-screen grid place-items-center p-8`. Background image `bg-cover bg-center`. Overlay `absolute inset-0 bg-black bg-opacity-30`. Content `relative z-10 text-center text-white`. Headline `text-7xl font-bold font-cormorantgaramond mb-4`. Subtitle `text-xl font-roboto max-w-3xl mx-auto`.\nSignature Hook (Framer Motion Spec): Parent container `motion.div` with `initial={{ opacity: 0 }}` and `animate={{ opacity: 1 }}` with `transition={{ duration: 1.5 }}`. Headline `motion.h1` uses `variants` with `transition: { staggerChildren: 0.05 }`. Each letter `span` has a variant `initial={{ opacity: 0, y: 20 }}` and `animate={{ opacity: 1, y: 0 }}`."
+    },
+    "components": {
+      "images": "Layout Role: Integrated seamlessly within content. | Gallery Type: Clean grid layouts for plot showcases, full-width hero images, and supporting visuals. Images are high-resolution and professionally shot, with minimal borders and ample surrounding whitespace.",
+      "buttons": "Primary: background-color: #003539, color: #FFFFFF, border-radius: 8px, padding: 12px 24px, font-weight: 600. Secondary: background-color: transparent, color: #1F3D3A, border: 1px solid #1F3D3A, border-radius: 8px, padding: 12px 24px, font-weight: 600.",
+      "containers": "Method: Whitespace, Style: 80px vertical margin between sections. Inner containers use 24px padding. Subtle background color variations for distinct sections."
+    },
+    "palette": {
+      "colors": {
+        "customColors": [
+          {
+            "name": "accent",
+            "value": "#1F3D3A"
+          },
+          {
+            "name": "link",
+            "value": "#1F3D3A"
+          },
+          {
+            "name": "textPrimary",
+            "value": "#212529"
+          },
+          {
+            "name": "destructive",
+            "value": "#dc3545"
+          },
+          {
+            "name": "destructiveForeground",
+            "value": "#FFFFFF"
+          }
+        ],
+        "background": "#F4F1EC",
+        "secondary": "#FFF9EB",
+        "foreground": "#212529",
+        "secondaryForeground": "#003539",
+        "primaryForeground": "#FFFFFF",
+        "primary": "#003539"
+      },
+      "paletteUsageGuide": "The primary color (#003539) is for key calls to action and branding elements. Secondary (#FFF9EB) serves as a contrasting background or text color. The background (#F4F1EC) provides a light, airy base. Accent and link colors (#1F3D3A) are used for secondary CTAs, navigation links, and subtle highlights. Text is primarily dark (#212529) for readability on light backgrounds.",
+      "paletteAccessibilityNotes": "Ensure sufficient contrast between background and foreground colors for all text elements. Primary color (#003539) has good contrast against white (#FFFFFF) and secondary color (#FFF9EB). TextPrimary (#212529) has excellent contrast against background (#F4F1EC) and secondary (#FFF9EB)."
+    },
+    "typography": {
+      "headings": {
+        "font": {
+          "fontFamily": "cormorantgaramond",
+          "role": "headings",
+          "fontJustification": ""
+        },
+        "headingsAccessibilityNotes": "Ensure headings are semantically correct and have adequate size and contrast against their background.",
+        "headingsSimilarFonts": [
+          "playfair display"
+        ],
+        "headingsUsageGuide": "Use for all major headings (H1, H2, H3) to establish a premium and classic feel. Ensure sufficient size and weight for clear hierarchy."
+      },
+      "paragraphs": {
+        "font": {
+          "fontFamily": "roboto",
+          "role": "paragraphs",
+          "fontJustification": ""
+        },
+        "paragraphsUsageGuide": "Use for all body text, descriptions, and longer content blocks. Maintain consistent line height and letter spacing for optimal readability.",
+        "paragraphsSimilarFonts": [
+          "open sans",
+          "nunito sans",
+          "helvetica-w01-roman"
+        ],
+        "paragraphsAccessibilityNotes": "Ensure body text has a minimum font size of 16px and sufficient line height (1.5x) for readability. Maintain high contrast ratios."
+      },
+      "customFontFamilies": {},
+      "fontSizes": [
+        {
+          "name": "xs",
+          "size": "0.8rem",
+          "lineHeight": "1.2",
+          "letterSpacing": "0.02em",
+          "fontWeight": "400"
+        },
+        {
+          "name": "sm",
+          "size": "1rem",
+          "lineHeight": "1.4",
+          "letterSpacing": "0.03em",
+          "fontWeight": "400"
+        },
+        {
+          "name": "base",
+          "size": "1.1rem",
+          "lineHeight": "1.5",
+          "letterSpacing": "0.03em",
+          "fontWeight": "400"
+        },
+        {
+          "name": "lg",
+          "size": "1.25rem",
+          "lineHeight": "1.5",
+          "letterSpacing": "0.03em",
+          "fontWeight": "400"
+        },
+        {
+          "name": "xl",
+          "size": "1.5rem",
+          "lineHeight": "1.4",
+          "letterSpacing": "0.02em",
+          "fontWeight": "600"
+        },
+        {
+          "name": "2xl",
+          "size": "1.75rem",
+          "lineHeight": "1.3",
+          "letterSpacing": "0.01em",
+          "fontWeight": "600"
+        },
+        {
+          "name": "3xl",
+          "size": "2rem",
+          "lineHeight": "1.2",
+          "letterSpacing": "0.01em",
+          "fontWeight": "700"
+        },
+        {
+          "name": "4xl",
+          "size": "2.5rem",
+          "lineHeight": "1.2",
+          "letterSpacing": "0em",
+          "fontWeight": "700"
+        },
+        {
+          "name": "5xl",
+          "size": "3rem",
+          "lineHeight": "1.1",
+          "letterSpacing": "0em",
+          "fontWeight": "700"
+        },
+        {
+          "name": "6xl",
+          "size": "3.5rem",
+          "lineHeight": "1.1",
+          "letterSpacing": "0em",
+          "fontWeight": "700"
+        },
+        {
+          "name": "7xl",
+          "size": "4rem",
+          "lineHeight": "1.05",
+          "letterSpacing": "0em",
+          "fontWeight": "700"
+        },
+        {
+          "name": "8xl",
+          "size": "5rem",
+          "lineHeight": "1.05",
+          "letterSpacing": "0em",
+          "fontWeight": "700"
+        },
+        {
+          "name": "9xl",
+          "size": "6rem",
+          "lineHeight": "1.05",
+          "letterSpacing": "0em",
+          "fontWeight": "700"
+        }
+      ],
+      "welcomeSectionTypography": {
+        "placement": "Centered, prominent placement on the hero section.",
+        "implementation": "Large, impactful heading using 'cormorantgaramond' (e.g., 5xl-7xl) with a clear, concise tagline below using 'roboto' (e.g., base-lg)."
+      }
+    },
+    "originImagesUrls": []
+  },
+  "attachments": {
+    "contentImagesUrls": [],
+    "inspirationImagesUrls": [
+      "https://wixmp-c562ea68f10846b458285ce5.wixmp.com/scraped-screenshots/screenshot-1779251545343.webp"
+    ]
+  },
+  "status": "READY",
+  "plan": "\n\n```json\n{\n  \"sections\": [\n    {\n      \"id\": \"overview\",\n      \"title\": \"## Overview\",\n      \"content\": \"This site showcases a premium township development with villa plots, featuring comprehensive information about the project, amenities, and sustainability initiatives.\"\n    },\n    {\n      \"id\": \"key-features\",\n      \"title\": \"## Key features\",\n      \"content\": \"- **View Project Information**: Display comprehensive details about the township, including location, plot sizes, and development vision.\\n- **View Amenities Listing**: Showcase all community facilities and amenities available within the township.\\n- **View Sustainability Features**: Present the project's environmental commitments and green initiatives.\\n- **Submit Inquiry Form**: Allow prospective buyers to request information or schedule site visits.\\n- **Download Brochure**: Enable visitors to download detailed project documentation.\",\n      \"metadata\": [\n        { \"id\": \"view-project-information\", \"name\": \"View Project Information\" },\n        { \"id\": \"view-amenities-listing\", \"name\": \"View Amenities Listing\" },\n        { \"id\": \"view-sustainability-features\", \"name\": \"View Sustainability Features\" },\n        { \"id\": \"submit-inquiry-form\", \"name\": \"Submit Inquiry Form\" },\n        { \"id\": \"download-brochure\", \"name\": \"Download Brochure\" }\n      ]\n    },\n    {\n      \"id\": \"structure\",\n      \"title\": \"## Structure\",\n      \"content\": \"- **Header (Reusable)**: Contains site logo, navigation menu with links to all main pages, and primary call-to-action button.\\n- **Home Page**: Features hero section with project overview, key highlights, amenities preview, and inquiry form.\\n- **About Page**: Displays detailed information about the township concept, developer background, and project vision.\\n- **Amenities Page**: Lists all community facilities including clubhouse, schools, hospitals, shopping, and recreational areas.\\n- **Sustainability Page**: Showcases environmental initiatives, green features, and commitment to sustainable living.\\n- **Contact Page**: Provides contact information, inquiry form, location map, and brochure download option.\\n- **Footer (Reusable)**: Includes company information, quick links, contact details, and social media links.\"\n    }\n  ],\n  \"apps\": [\n    {\n      \"id\": \"wix-cms\",\n      \"keyFeatures\": [\n        { \"id\": \"view-project-information\", \"name\": \"View Project Information\" },\n        { \"id\": \"view-amenities-listing\", \"name\": \"View Amenities Listing\" },\n        { \"id\": \"view-sustainability-features\", \"name\": \"View Sustainability Features\" },\n        { \"id\": \"submit-inquiry-form\", \"name\": \"Submit Inquiry Form\" },\n        { \"id\": \"download-brochure\", \"name\": \"Download Brochure\" }\n      ]\n    }\n  ],\n  \"version\": \"4.0.1\"\n}\n```"
+}

@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.beyondacres.in/sitemap.xml
+
+# Crawl-delay hint (optional, not honoured by Google)
+Crawl-delay: 5
