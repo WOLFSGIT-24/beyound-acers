@@ -133,7 +133,7 @@ export default function HeroSection({ onOpenPopup }: HeroSectionProps) {
                     STARTING
                   </div>
                   <div style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: '1.25rem', color: '#FFFFFF', marginTop: 2 }}>
-                    ₹55 LAKHS+
+                    ₹56 LAKHS+
                   </div>
                 </div>
               </div>

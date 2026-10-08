@@ -3,7 +3,7 @@ export const Head = () => {
   const altDomain = "https://code-unstoppable.com";
   const title = "Riverine by Beyond Acres | Riverside Living by the Kaveri, Srirangapatna";
   const description =
-    "Riverine by Beyond Acres: a 21-acre riverside neighbourhood beside the River Kaveri in Srirangapatna. 2,000+ native trees, 35% open green, biodiversity parks and riverfront terraces. Plots from ₹55 Lakhs. 90 mins from Bengaluru. RERA Approved. Grand launch this Dussehra.";
+    "Riverine by Beyond Acres: a 21-acre riverside neighbourhood beside the River Kaveri in Srirangapatna. 2,000+ native trees, 35% open green, biodiversity parks and riverfront terraces. Plots from ₹56 Lakhs. 90 mins from Bengaluru. RERA Approved. Grand launch this Dussehra.";
 
   // UTM Tracker Codes
   const trackerCodes = [
@@ -103,10 +103,10 @@ export const Head = () => {
         offers: {
           "@type": "Offer",
           priceCurrency: "INR",
-          price: "5500000",
+          price: "5600000",
           priceSpecification: {
             "@type": "PriceSpecification",
-            minPrice: "5500000",
+            minPrice: "5600000",
             priceCurrency: "INR",
             description: "Starting price for 1,454 – 2,000+ sq ft plots",
           },
@@ -216,7 +216,7 @@ export const Head = () => {
             name: "What plot sizes are available at Riverine?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "Plots of 1,454 sq ft to 2,000+ sq ft are available, starting from ₹55 Lakhs: 9×15m (1,454 sq ft), 12×18m (2,325 sq ft), and river-facing plots up to 2,939 sq ft. The 1,163 sq ft plots are sold out.",
+              text: "Plots of 1,454 sq ft to 2,000+ sq ft are available, starting from ₹56 Lakhs: 9×15m (1,454 sq ft), 12×18m (2,325 sq ft), and river-facing plots up to 2,939 sq ft. The 1,163 sq ft plots are sold out.",
             },
           },
           {

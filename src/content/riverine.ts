@@ -8,7 +8,7 @@ export const LAUNCH = {
 } as const;
 
 export const PRICING = {
-  startingPrice: '₹55 Lakhs',
+  startingPrice: '₹56 Lakhs',
   availableSizes: '1,454 – 2,000+ Sq.Ft.',
 } as const;
 
